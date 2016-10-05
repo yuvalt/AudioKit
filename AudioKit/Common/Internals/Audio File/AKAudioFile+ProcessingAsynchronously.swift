@@ -682,8 +682,10 @@ extension AKAudioFile {
             if let session = exportSessionsArray[currentExportProcessId] {
                 switch session.avAssetExportSession.status {
                 case  AVAssetExportSessionStatus.Failed:
+                    print("ExportFactory: session #\(session.idStamp) Failed \(session.avAssetExportSession.error)")
                     session.callBack(processedFile: nil, error: session.avAssetExportSession.error)
                 case AVAssetExportSessionStatus.Cancelled:
+                    print("ExportFactory: session #\(session.idStamp) Cancelled \(session.avAssetExportSession.error)")
                     session.callBack(processedFile: nil, error: session.avAssetExportSession.error)
                 default :
                     if  let outputUrl = session.avAssetExportSession.outputURL {
@@ -691,6 +693,7 @@ extension AKAudioFile {
                             let audiofile = try AKAudioFile(forReading: outputUrl)
                             session.callBack(processedFile: audiofile, error: nil)
                         } catch let error as NSError {
+                            print("ExportFactory: session #\(session.idStamp) Cant read output \(error)")
                             session.callBack(processedFile: nil, error: error)
                         }
                     } else {

@@ -132,6 +132,7 @@
 				TargetAttributes = {
 					8DAD9EDC1D3E4A3400CD3B0A = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -297,6 +298,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.audiokit.recorder;
 				PRODUCT_NAME = RecorderDemo;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -314,6 +316,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.audiokit.recorder;
 				PRODUCT_NAME = RecorderDemo;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

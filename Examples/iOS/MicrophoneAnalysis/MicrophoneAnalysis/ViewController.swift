@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         AudioKit.output = silence
         AudioKit.start()
         setupPlot()
-        NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.updateUI), userInfo: nil, repeats: true)
+//        NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.updateUI), userInfo: nil, repeats: true)
     }
 
     func updateUI() {
